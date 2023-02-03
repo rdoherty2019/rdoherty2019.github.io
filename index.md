@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[First Shift Experiment](/firstShiftExperiment.ipynb)
+[First Shift Experiment](/firstShiftExperiment.html)
 <img src="images/Wayne Gretzky.jpeg"/>
 
 ---
