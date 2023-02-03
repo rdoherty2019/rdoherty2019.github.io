@@ -5,7 +5,7 @@
 ### Category Name 1 
 
 [First Shift Experiment](/firstShiftExperiment.ipynb)
-<img src="rdoherty2019.github.io/Wayne Gretzky.jpeg"/>
+<img src="images/Wayne Gretzky.jpeg"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
