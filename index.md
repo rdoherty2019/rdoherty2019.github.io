@@ -9,7 +9,7 @@
 
 ---
 [Hockey Tryout Map](/tryoutMap/WebscraperUSHL.py)
-<img src="images/hockeyTeamMap"/>
+<img src="images/hockeyTeamMap.png"/>
 
 ---
 [Project 3 Title](http://example.com/)
