@@ -2,13 +2,13 @@
 
 ---
 
-### Category Name 1 
+### Hockey Data Science 
 
 [First Shift Experiment](/firstShiftExperiment.html)
 <img src="images/Wayne Gretzky.jpeg"/>
 
 ---
-[Hockey Tryout Map](/tryoutMap/WebscraperUSHL.py)
+[Hockey Tryout Map](/tryoutMap/map.html)
 <img src="images/hockeyTeamMap.png"/>
 
 ---
