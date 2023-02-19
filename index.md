@@ -8,8 +8,8 @@
 <img src="images/Wayne Gretzky.jpeg"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Hockey Tryout Map](/tryoutMap/WebscraperUSHL.py)
+<img src="images/hockeyTeamMap"/>
 
 ---
 [Project 3 Title](http://example.com/)
