@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import pandas as pd
 import requests
 
 # Importing the first time
@@ -55,4 +56,7 @@ for description in descriptions:
         dateList.append(tag.text)
     counter +=1
     catcher.append([header, href, dateList])
-print(catcher)
+
+df = pd.DataFrame(catcher, columns = ["Team", "Website", "Tryouts"])
+
+df.to_csv('ushl-tryouts.csv', index=False, sep=',')
