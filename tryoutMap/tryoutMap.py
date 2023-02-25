@@ -25,10 +25,16 @@ import requests
 
 # Geocoding an address
 geocode_result = gmaps.geocode('4125 Radio Dr, Woodbury, MN 55129')
-print(geocode_result)
+# Gathering the Geolocation data
 geometry_dict = geocode_result[0].get('geometry').get('location')
-print(geometry_dict)
-folium.Marker(location=[geometry_dict.get('lat'), geometry_dict.get('lng')]).add_to(m)
+# Setup the content of the popup
+iframe = folium.IFrame('Tryout Information:' + 'Cedar Rapids RoughRiders\nhttp://www.roughridershockey.com/\nFutures Camp\n- June 10-12\n- HealthEast Sports Center in Woodbury, Minnesota')
+
+# Initialise the popup using the iframe
+popup = folium.Popup(iframe, min_width=300, max_width=300)
+
+folium.Marker(location=[geometry_dict.get('lat'), geometry_dict.get('lng')],
+              popup = popup).add_to(m)
 
 '''
 # import USHL Dates
