@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_16e67b9d8aeea2c1d655740c5705f9ec {
+                #map_f002515b72535983193054e8e73c8a58 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_16e67b9d8aeea2c1d655740c5705f9ec" ></div>
+            <div class="folium-map" id="map_f002515b72535983193054e8e73c8a58" ></div>
         
 </body>
 <script>
     
     
-            var map_16e67b9d8aeea2c1d655740c5705f9ec = L.map(
-                "map_16e67b9d8aeea2c1d655740c5705f9ec",
+            var map_f002515b72535983193054e8e73c8a58 = L.map(
+                "map_f002515b72535983193054e8e73c8a58",
                 {
                     center: [37.0, -102.0],
                     crs: L.CRS.EPSG3857,
@@ -60,31 +60,39 @@
 
         
     
-            var tile_layer_ff530c529c55ae6513508acbd54b0ca7 = L.tileLayer(
+            var tile_layer_b4f707b439494bcb49fcf4a2e163ef26 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_16e67b9d8aeea2c1d655740c5705f9ec);
+            ).addTo(map_f002515b72535983193054e8e73c8a58);
         
     
-            var marker_5ef7e287dcd121f83fb06a7bcb3e0d3f = L.marker(
+            var marker_29fd86ce24a19113ef6ab8ffa1dfd16e = L.marker(
                 [44.8884626, -92.9369972],
                 {}
-            ).addTo(map_16e67b9d8aeea2c1d655740c5705f9ec);
+            ).addTo(map_f002515b72535983193054e8e73c8a58);
         
     
-        var popup_b4dda7418d26edeaf31d46569d74b68c = L.popup({"maxWidth": 300, "minWidth": 300});
+        var popup_c39c8ab191c0a4036af16dcc4d791073 = L.popup({"maxWidth": 300, "minWidth": 300});
 
         
             
-                var i_frame_91e71053c5779cae0dd7f816260f7067 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICBUcnlvdXQgSW5mb3JtYXRpb246Q2VkYXIgUmFwaWRzIFJvdWdoUmlkZXJzCmh0dHA6Ly93d3cucm91Z2hyaWRlcnNob2NrZXkuY29tLwpGdXR1cmVzIENhbXAKLSBKdW5lIDEwLTEyCi0gSGVhbHRoRWFzdCBTcG9ydHMgQ2VudGVyIGluIFdvb2RidXJ5LCBNaW5uZXNvdGE=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
-                popup_b4dda7418d26edeaf31d46569d74b68c.setContent(i_frame_91e71053c5779cae0dd7f816260f7067);
+                var i_frame_72117277f83df21a768e65c2e16a600f = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICBUcnlvdXQgSW5mb3JtYXRpb246IENlZGFyIFJhcGlkcyBSb3VnaFJpZGVycwpodHRwOi8vd3d3LnJvdWdocmlkZXJzaG9ja2V5LmNvbS8KIEZ1dHVyZXMgQ2FtcCAtIEp1bmUgMTAtMTIKLSBIZWFsdGhFYXN0IFNwb3J0cyBDZW50ZXIgaW4gV29vZGJ1cnksIE1pbm5lc290YQ==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_c39c8ab191c0a4036af16dcc4d791073.setContent(i_frame_72117277f83df21a768e65c2e16a600f);
             
         
 
-        marker_5ef7e287dcd121f83fb06a7bcb3e0d3f.bindPopup(popup_b4dda7418d26edeaf31d46569d74b68c)
+        marker_29fd86ce24a19113ef6ab8ffa1dfd16e.bindPopup(popup_c39c8ab191c0a4036af16dcc4d791073)
         ;
 
         
     
+    
+            marker_29fd86ce24a19113ef6ab8ffa1dfd16e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
 </script>
 </html>
