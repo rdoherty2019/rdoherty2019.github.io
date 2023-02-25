@@ -1,43 +1,36 @@
 import folium
 import pandas as pd
 import subprocess
+import googlemaps
 
 '''url = (
     "https://raw.githubusercontent.com/python-visualization/folium/main/examples/data"
 )
 state_geo = f"{url}/us-states.json"'''
 
+# Google Api Key
+apiKey = "AIzaSyCmPfH0DVs9d2z8foYZS_TU9sSrFwQWyFM"
+
+# Adding Google Maps
+gmaps = googlemaps.Client(key= apiKey)
+
 # Create a map centered on the United States
 m = folium.Map(location=[37, -102], zoom_start=4)
-
-# Add the GeoJSON data for the US states
-"""folium.GeoJson(
-    state_geo
-).add_to(m)"""
 
 # Add Markers for locations
 
 #Add a single marker
 
-'''import requests
-# Set the URL and parameters for the Geocoding API
-urlGoogle = "https://maps.googleapis.com/maps/api/geocode/json"
-params = {"address": "1600 Amphitheatre Parkway, Mountain View, CA", "key": "YOUR_API_KEY"}
+import requests
 
-# Send a GET request to the API
-response = requests.get(url, params=params)
+# Geocoding an address
+geocode_result = gmaps.geocode('4125 Radio Dr, Woodbury, MN 55129')
+print(geocode_result)
+geometry_dict = geocode_result[0].get('geometry').get('location')
+print(geometry_dict)
+folium.Marker(location=[geometry_dict.get('lat'), geometry_dict.get('lng')]).add_to(m)
 
-# Parse the JSON response and extract the latitude and longitude
-data = response.json()
-lat = data["results"][0]["geometry"]["location"]["lat"]
-lng = data["results"][0]["geometry"]["location"]["lng"]
-
-# Print the latitude and longitude
-print("Latitude:", lat)
-print("Longitude:", lng)
-
-folium.Marker(location=[df.Latitude.mean(), df.Longitude.mean()]).add_to(map)
-
+'''
 # import USHL Dates
 ushlDates = pd.read_csv('ushl-tryouts.csv')
 # Do something with the output
