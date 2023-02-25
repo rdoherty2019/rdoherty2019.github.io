@@ -2,14 +2,18 @@ import folium
 import pandas as pd
 import subprocess
 import googlemaps
+from configparser import ConfigParser
+
+config = ConfigParser()
+
+config.read('../keys_config.cfg')
+
+apiKey = config.get('google', 'apiKey')
 
 '''url = (
     "https://raw.githubusercontent.com/python-visualization/folium/main/examples/data"
 )
 state_geo = f"{url}/us-states.json"'''
-
-# Google Api Key
-apiKey = "AIzaSyCmPfH0DVs9d2z8foYZS_TU9sSrFwQWyFM"
 
 # Adding Google Maps
 gmaps = googlemaps.Client(key= apiKey)
