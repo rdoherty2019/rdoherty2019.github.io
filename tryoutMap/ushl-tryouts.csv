@@ -1,9 +1,58 @@
 Team,Website,Tryouts
-Cedar Rapids RoughRiders,http://www.roughridershockey.com/,"['Main Camp\xa0\n- June 2-5\n- ImOn Ice Arena in Cedar Rapids, Iowa', 'Futures Camp\n- June 10-12\n- HealthEast Sports Center in Woodbury, Minnesota', '\xa0']"
-Des Moines Buccaneers,http://www.bucshockey.com/,"['Main Camp - Invitation Only (2002-06)\n- June 16-19', 'For More Information,\xa0Contact Buccaneers Head Coach Matt Curley at curley@bucshockey.com']"
-Fargo Force,http://www.fargoforce.com/,"['Goalie Camp\n- June 2-4', 'Top Prospect Camp (2004-07)\n- June 3-5', 'Main Camp - Invitation Only (2002-05)\n- June 5-8', 'For More Information,\xa0Contact Force General Manager Cary Eades at carye@fargoforce.com']"
-Green Bay Gamblers,http://www.gamblershockey.com/,"['Main Camp - Invitation Only (2002-06)\n- June 11-16', 'Futures/Development Camp (2007-08)\n- June 19-22', 'All camps will take place at the Resch Center in Green Bay, Wisc.', 'For More Information,\xa0Contact Brian Sommariva at brian.sommariva@gamblershockey.com']"
-Madison Capitols,http://www.madcapshockey.com/,"['Goalie Camp\n- May 30-31', 'Main Camp Goalies & Players\xa0\n- June 1-5', 'Futures Camp\n- June 19-21', 'For More Information, Contact Head Coach & General Manager Tom Upton at tom@madcapshockey.com']"
-Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"['Prospect Camp (2007-08)\n- May 27-29\n- Mercy Health Arena (Muskegon, Mich.)', 'Goalie Camp (Invite Only)\xa0\n- June 4-5\n- Lakeshore Sports Centre (Muskegon, Mich.)', 'Main Camp (Invite Only)\n- June 9-11\n- Mercy Health Arena (Muskegon, Mich.)', 'Final Main Camp (Invite Only)\n- June 12-15\n- Mercy Health Arena (Muskegon, Mich.)\xa0', 'For More Information,\xa0Contact Josh Nelson at jnelson@muskegonlumberjacks.com']"
-Tri-City Storm,http://www.stormhockey.com/,"['Futures Camp (2007-08)\n- June 10-12', 'Goaltender Camp (2002-07)\n- June 14-15', 'Final/Main Camp (Invitation Only) (2002-06)\n- June 16-18', 'All camps will take place at the Las Vegas Ice Center in Las Vegas, Nev.\xa0', 'For More Information, Contact General Manager Jason Koehler at jkoehler@stormhockey.com', 'Current details and information regarding each camp can be found at www.stormhockey.com']"
-Youngstown Phantoms,http://www.youngstownphantoms.com/,"['Goaltender Camp\n- July 11-13', 'Main Camp\n- July 13-17', 'All camps will take place at the Printscape\xa0Arena\xa0']"
+Cedar Rapids RoughRiders,http://www.roughridershockey.com/,"Main Camp 
+- June 2-5
+- ImOn Ice Arena in Cedar Rapids, Iowa"
+Cedar Rapids RoughRiders,http://www.roughridershockey.com/,"Futures Camp
+- June 10-12
+- HealthEast Sports Center in Woodbury, Minnesota"
+Cedar Rapids RoughRiders,http://www.roughridershockey.com/, 
+Des Moines Buccaneers,http://www.bucshockey.com/,"Main Camp - Invitation Only (2002-06)
+- June 16-19"
+Des Moines Buccaneers,http://www.bucshockey.com/,"For More Information, Contact Buccaneers Head Coach Matt Curley at curley@bucshockey.com"
+Fargo Force,http://www.fargoforce.com/,"Goalie Camp
+- June 2-4"
+Fargo Force,http://www.fargoforce.com/,"Top Prospect Camp (2004-07)
+- June 3-5"
+Fargo Force,http://www.fargoforce.com/,"Main Camp - Invitation Only (2002-05)
+- June 5-8"
+Fargo Force,http://www.fargoforce.com/,"For More Information, Contact Force General Manager Cary Eades at carye@fargoforce.com"
+Green Bay Gamblers,http://www.gamblershockey.com/,"Main Camp - Invitation Only (2002-06)
+- June 11-16"
+Green Bay Gamblers,http://www.gamblershockey.com/,"Futures/Development Camp (2007-08)
+- June 19-22"
+Green Bay Gamblers,http://www.gamblershockey.com/,"All camps will take place at the Resch Center in Green Bay, Wisc."
+Green Bay Gamblers,http://www.gamblershockey.com/,"For More Information, Contact Brian Sommariva at brian.sommariva@gamblershockey.com"
+Madison Capitols,http://www.madcapshockey.com/,"Goalie Camp
+- May 30-31"
+Madison Capitols,http://www.madcapshockey.com/,"Main Camp Goalies & Players 
+- June 1-5"
+Madison Capitols,http://www.madcapshockey.com/,"Futures Camp
+- June 19-21"
+Madison Capitols,http://www.madcapshockey.com/,"For More Information, Contact Head Coach & General Manager Tom Upton at tom@madcapshockey.com"
+Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"Prospect Camp (2007-08)
+- May 27-29
+- Mercy Health Arena (Muskegon, Mich.)"
+Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"Goalie Camp (Invite Only) 
+- June 4-5
+- Lakeshore Sports Centre (Muskegon, Mich.)"
+Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"Main Camp (Invite Only)
+- June 9-11
+- Mercy Health Arena (Muskegon, Mich.)"
+Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"Final Main Camp (Invite Only)
+- June 12-15
+- Mercy Health Arena (Muskegon, Mich.) "
+Muskegon Lumberjacks,http://www.muskegonlumberjacks.com/,"For More Information, Contact Josh Nelson at jnelson@muskegonlumberjacks.com"
+Tri-City Storm,http://www.stormhockey.com/,"Futures Camp (2007-08)
+- June 10-12"
+Tri-City Storm,http://www.stormhockey.com/,"Goaltender Camp (2002-07)
+- June 14-15"
+Tri-City Storm,http://www.stormhockey.com/,"Final/Main Camp (Invitation Only) (2002-06)
+- June 16-18"
+Tri-City Storm,http://www.stormhockey.com/,"All camps will take place at the Las Vegas Ice Center in Las Vegas, Nev. "
+Tri-City Storm,http://www.stormhockey.com/,"For More Information, Contact General Manager Jason Koehler at jkoehler@stormhockey.com"
+Tri-City Storm,http://www.stormhockey.com/,Current details and information regarding each camp can be found at www.stormhockey.com
+Youngstown Phantoms,http://www.youngstownphantoms.com/,"Goaltender Camp
+- July 11-13"
+Youngstown Phantoms,http://www.youngstownphantoms.com/,"Main Camp
+- July 13-17"
+Youngstown Phantoms,http://www.youngstownphantoms.com/,All camps will take place at the Printscape Arena 
