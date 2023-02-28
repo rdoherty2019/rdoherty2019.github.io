@@ -25,15 +25,9 @@ contents = HTMLFileToBeOpened.read()
 # parse the HTML Data from the file variable
 soup = BeautifulSoup(contents, 'html.parser')
 
-# Get the titles of the page
-title_element = soup.head.title
-if title_element:
-    title = title_element.string
-else:
-    title = None
-
 # Get the headers and text within each `<div class="description">`
 descriptions = soup.find_all("div", {"class": "description"})
+
 # Find all the dates
 dates = soup.find_all("div", {"class": "text clearfix"})
 # Container to hold all of the output data
@@ -50,13 +44,16 @@ for description in descriptions:
     link = description.a
     # Extract the `href` attribute
     href = link.get("href")
-    dateList = []
+    # Tryout Dates
+    ## Find all the dates
     date = dates[counter].find_all("p")
+    ## Iterate through all dates
     for tag in date:
-        dateList.append(tag.text)
+        #
+        catcher.append([header, href,tag.text])
     counter +=1
-    catcher.append([header, href, dateList])
 
 df = pd.DataFrame(catcher, columns = ["Team", "Website", "Tryouts"])
+df['Tryouts'] = df['Tryouts'] = df['Tryouts'].str.replace('\n', '', regex=True)
 
 df.to_csv('ushl-tryouts.csv', index=False, sep=',')
