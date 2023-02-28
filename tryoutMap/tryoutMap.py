@@ -3,19 +3,22 @@ import pandas as pd
 import subprocess
 import googlemaps
 from configparser import ConfigParser
+import requests
 
+# Import API Keys
 config = ConfigParser()
-
+## Read in config file
 config.read('../keys_config.cfg')
-
+## Find API Key for Google
 apiKey = config.get('google', 'apiKey')
 
-'''url = (
-    "https://raw.githubusercontent.com/python-visualization/folium/main/examples/data"
-)
-state_geo = f"{url}/us-states.json"'''
+# Import Files
+## import USHL Tryout Dates
+ushlTryouts = pd.read_csv('ushl-tryouts.csv')
+## import USHL Teams
+ushlTeams = pd.read_csv('ushlTeams.csv')
 
-# Adding Google Maps
+## Adding Google Maps
 gmaps = googlemaps.Client(key= apiKey)
 
 # Create a map centered on the United States
@@ -25,9 +28,9 @@ m = folium.Map(location=[37, -102], zoom_start=4)
 
 #Add a single marker
 
-import requests
 
-# Geocoding an address
+
+## Geocoding an address
 geocode_result = gmaps.geocode('4125 Radio Dr, Woodbury, MN 55129')
 # Gathering the Geolocation data
 geometry_dict = geocode_result[0].get('geometry').get('location')
@@ -42,12 +45,21 @@ folium.Marker(location=[geometry_dict.get('lat'), geometry_dict.get('lng')],
               popup = popup,
               tooltip= tooltip).add_to(m)
 
-'''
-# import USHL Dates
-ushlDates = pd.read_csv('ushl-tryouts.csv')
-# Do something with the output
-for index, row in ushlDates.iterrows():
-    print(row["Team"], row["Website"], row["Tryouts"])'''
+## Multilpe Markers
+### Iterate through teams
+for index, row in ushlTeams.iterrows():
+    # Find all the tryout dates for the specifc team
+    temp = ushlTryouts[ushlTryouts["Team"]==row["Team"]]
+    # Determine if there are any tryouts
+    if temp.empty:
+        # If there aren't tryouts return this string
+        print("The", row["Team"], "has not posted any tryouts. Please check again in the future.")
+    else:
+        # If there are tryouts group them all together into a set of strings
+        # Might want to leave as seperate rows we will see
+        grouped_df = temp.groupby('Team')['Tryouts'].apply('\n'.join)
+        print(grouped_df)
+
 
 # Save the map as an HTML file
 m.save('map.html')
