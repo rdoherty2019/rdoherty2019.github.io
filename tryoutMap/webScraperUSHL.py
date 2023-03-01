@@ -54,5 +54,6 @@ for description in descriptions:
     counter +=1
 
 df = pd.DataFrame(catcher, columns = ["Team", "Website", "Tryouts"])
+df['Tryouts'] = df['Tryouts'] = df['Tryouts'].str.replace('\n', '', regex=True)
 
 df.to_csv('ushl-tryouts.csv', index=False, sep=',')
