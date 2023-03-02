@@ -13077,14 +13077,17 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h1><p>There was a thought back to my playing days that revolved around a quote by or about Wayne Gretzky that I'll do my best not butcher. It involved why he would take such a long first shift, or why his coach would double shift him on his first shift. It was so he could catch his "Second Wind", meaning that since he was tired after his first shift, he would catch his breath, and then have more endurance thereafter and would play better.</p>
-<p>The coach or Wayne would do this intentionally to get into the game and play better throughout the rest of the game. I want to see if this has any credence or is just some myth that a coach made up to play his best player more often at the beginning of the game.</p>
-<h2 id="Author">Author<a class="anchor-link" href="#Author">&#182;</a></h2><p>Richie Doherty</p>
-<p>Data Science beginner and Hockey enthusiast.</p>
-<p>Contact at rd2414@nyu.edu</p>
-<p>Github : rdoherty2019</p>
-<p>Github Portfiolo: rdoherty2019.github.io</p>
+<h1 id="Introdcution:">Introdcution:<a class="anchor-link" href="#Introdcution:">&#182;</a></h1><p><em>Researcher</em>: Richie Doherty - Data Science and Hockey enthusiast.</p>
+<p><em>Title</em>: First Shift Experiment</p>
+<p><em>Research Focus</em>: NHL Player first shift length data, and its connection to goal output per game per player.</p>
+<p><em>Contact</em>: rd2414@nyu.edu</p>
+<p><em>Github</em>: rdoherty2019</p>
+<p><em>Github Portfiolo</em>: rdoherty2019.github.io</p>
 <p>Would love to talk about Hockey and Data Science.</p>
+<h2 id="Abstract:">Abstract:<a class="anchor-link" href="#Abstract:">&#182;</a></h2><p>There was a thought back in my playing days that revolved around the idea of "catching your second wind". It involved a quote by or about Wayne Gretzky. It described why he would take such a long first shift, or why his coach would double shift him on his first shift. It was so he could "catch his second wind", meaning that since he was tired after his first shift, he would catch his breath, and then have more endurance thereafter and would play better.</p>
+<p>To my knowledge this was an intentional tactic by Gretzky or his coach to have a higher impact on the game. I want to see if this has any credence or is just some myth that a coach made up to play his best player more often at the beginning of the game. To do so I took 2015 shift data and 2015 play by play data from the NHL to determine if the first shift length had an impact on the outcome of the players average goals per game.</p>
+<p>My findings were that the first shift length being greater than the average shift length doesn't have an affect on the average goals per game per player. Further we found that players score more goals per game on average if they have a shorter than average first shift. We ran this experiment 10,000 more times, taking a sample of the combined first shift and average goals per game data, and we were able to replicate our results for the 2015 season. We can say with 95% confidence that our findings from the 2015 season are likely to occur.</p>
+<p>By researching NHL first shift and play by play data it is evident that shorter first shifts are better for players than longer first shifts, and that whoever was coaching Wayne Gretzky at the time of this quote was using it as an excuse to play the best player of all time more often in the first period to get an early lead.</p>
 
 </div>
 </div>
@@ -13473,139 +13476,6 @@ For every game, and every player, calculate if they scored (Go through every PBP
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shift2015</span><span class="o">.</span><span class="n">dtypes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Unnamed: 0      int64
-Game_Id         int64
-Period          int64
-Team           object
-Player         object
-Player_Id       int64
-Start         float64
-End           float64
-Duration      float64
-Date           object
-dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pbp2015</span><span class="o">.</span><span class="n">dtypes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[9]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Unnamed: 0           int64
-Game_Id              int64
-Date                object
-Period               int64
-Event               object
-Description         object
-Time_Elapsed        object
-Seconds_Elapsed    float64
-Strength            object
-Ev_Zone             object
-Type                object
-Ev_Team             object
-Home_Zone           object
-Away_Team           object
-Home_Team           object
-p1_name             object
-p1_ID              float64
-p2_name             object
-p2_ID              float64
-p3_name             object
-p3_ID              float64
-awayPlayer1         object
-awayPlayer1_id     float64
-awayPlayer2         object
-awayPlayer2_id     float64
-awayPlayer3         object
-awayPlayer3_id     float64
-awayPlayer4         object
-awayPlayer4_id     float64
-awayPlayer5         object
-awayPlayer5_id     float64
-awayPlayer6         object
-awayPlayer6_id     float64
-homePlayer1         object
-homePlayer1_id     float64
-homePlayer2         object
-homePlayer2_id     float64
-homePlayer3         object
-homePlayer3_id     float64
-homePlayer4         object
-homePlayer4_id     float64
-homePlayer5         object
-homePlayer5_id     float64
-homePlayer6         object
-homePlayer6_id     float64
-Away_Players         int64
-Home_Players         int64
-Away_Score           int64
-Home_Score           int64
-Away_Goalie         object
-Away_Goalie_Id     float64
-Home_Goalie         object
-Home_Goalie_Id     float64
-xC                 float64
-yC                 float64
-Home_Coach          object
-Away_Coach          object
-dtype: object</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -15646,19 +15516,6 @@ Name: Goal_Id, dtype: float64
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
