@@ -5,6 +5,7 @@ import os
 import sys
 sys.path.append('//Users//Mackdig25//rdoherty2019.github.io//social-media-marketing-bot//src//Drivers')
 from gsheets import GSheet
+from handle_images import HandleImage
 
 # Social media platforms to target
 social_media_accounts = ['facebook']

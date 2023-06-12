@@ -6,6 +6,8 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from googleapiclient.errors import HttpError
 
 import sys
 sys.path.append('//Users//Mackdig25//rdoherty2019.github.io//social-media-marketing-bot//src//secrets')
@@ -18,7 +20,7 @@ class GSheet():
         """Initialize"""
         self.SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
         self.POST_CONTENT_SHEET_ID = POST_CONTENT_SHEET_ID
-        self.MAIN_RANGE = 'Main!A2:S'
+        self.MAIN_RANGE = "'Main'!A2:S"
         self.SOCIAL_MEDIA_COLUMNS = SOCIAL_MEDIA_COLUMNS
 
     def buildService(self):
@@ -33,7 +35,8 @@ class GSheet():
                 creds.refresh(Request())
             else:
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    '/Users/Mackdig25/rdoherty2019.github.io/social-media-marketing-bot/src/Secrets/client_secret.json', self.SCOPES)
+                    '//Users//Mackdig25//rdoherty2019.github.io//social-media-marketing-bot//src//Secrets//client_secret_desktop.json',
+                    self.SCOPES)
                 creds = flow.run_local_server(port=0)
             # Save the credentials for the next run
             with open('token.pickle', 'wb') as token:
@@ -45,7 +48,8 @@ class GSheet():
 
     def getPostContent(self, social_media_account):
         """Extracts the next content to post on social media"""
-        sm_range = self.SOCIAL_MEDIA_COLUMNS[social_media_account][0]
+        print(self.SOCIAL_MEDIA_COLUMNS[social_media_account])
+        sm_range = self.SOCIAL_MEDIA_COLUMNS[social_media_account]
         target_column = self.SOCIAL_MEDIA_COLUMNS[social_media_account][1]
         sm_result = self.sheet.values().get(spreadsheetId=self.POST_CONTENT_SHEET_ID,
                                             range=sm_range).execute()
@@ -56,7 +60,7 @@ class GSheet():
             target_row = 0
             for idx, row in enumerate(sm_values):
                 try:
-                    if row[int(target_column)] == 'No':
+                    if row[0] == 'No':
                         target_row = idx + 2
                         print(f'Found content on row # {target_row} to post on {social_media_account.title()}')
                         break
@@ -67,11 +71,10 @@ class GSheet():
             # Create the range for the second API call
             target_range_left = sm_range.split(':')[0][:-1]
             target_range_right = 'S'
-            target_range = f'{target_range_left}{str(target_row)}:{target_range_right}'
+            target_range = f'{target_range_left}{str(target_row)}:{target_range_right}{str(target_row)}'
             target_result = self.sheet.values().get(spreadsheetId=self.POST_CONTENT_SHEET_ID,
                                                             range=target_range).execute()
             target_values = target_result.get('values', [])
-
             if not target_values:
                 print('No data found.')
             else:
