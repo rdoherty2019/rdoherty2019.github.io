@@ -48,7 +48,6 @@ class GSheet():
 
     def getPostContent(self, social_media_account):
         """Extracts the next content to post on social media"""
-        print(self.SOCIAL_MEDIA_COLUMNS[social_media_account])
         sm_range = self.SOCIAL_MEDIA_COLUMNS[social_media_account]
         target_column = self.SOCIAL_MEDIA_COLUMNS[social_media_account][1]
         sm_result = self.sheet.values().get(spreadsheetId=self.POST_CONTENT_SHEET_ID,
