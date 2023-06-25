@@ -17,7 +17,7 @@ Hockey has been a passion of mine my entire life, and now that I'm done playing 
 _Summary_ :
 Using 2015/2016 NHL Play By Play data I created an Expected Goals model which predicts the likelihood a shot will go in the net based on several factors, the distance and angle of the shot, if it occurred after a turnover, and if the shot came off a pass or rebound. With this model we can determine if a player performed above or below their expected output for a game. 
 
-<img src="Average xG Value By Coordinate.png"/>
+<img src="/Hockey/Average xG Value By Coordinate.png"/>
 ---
 [First Shift Experiment](/HockeyExperiments/firstShiftExperiment.html)
 
