@@ -1,13 +1,5 @@
 ## Portfolio
 
-### Marketing Analytics
-
-[Social Media Marketing Bot](https://github.com/rdoherty2019/rdoherty2019.github.io/tree/main/social-media-marketing-bot)
-
-_Summary_ :
-Created a social media posting application to log into Facebook, Twitter, and Linkedin for me. This python script will log into Google Sheets, download the content, copy the image url and then post it to the social medias.
----
-
 ### Hockey Data Science
 
 Hockey has been a passion of mine my entire life, and now that I'm done playing I'm trying to find a way to fit it back into my professional life. I don't think you can grow up in Michigan in the late 90s, early 2000s and not be a hockey fan, but it probably didn't help that my Canadian grandmother was buying me skates at 2 years old.
