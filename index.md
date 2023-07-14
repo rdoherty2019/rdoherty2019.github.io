@@ -2,7 +2,7 @@
 
 ### Marketing Analytics
 
-[Social Media Marketing Bot](/social-media-marketing-bot)
+[Social Media Marketing Bot]
 
 _Summary_ :
 Created a social media posting application to log into Facebook, Twitter, and Linkedin for me. This python script will log into Google Sheets, download the content, copy the image url and then post it to the social medias.
