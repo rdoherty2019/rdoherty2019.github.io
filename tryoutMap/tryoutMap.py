@@ -30,9 +30,6 @@ m = folium.Map(location=[37, -102], zoom_start=4)
 # Add Markers for locations
 
 '''#Add a single marker
-
-
-
 ## Geocoding an address
 address = geolocator.geocode("Chicago Steel")
 ## Finding the Geocode location

@@ -5,14 +5,14 @@ import requests
 # Importing the first time
 
 # United States Hockey League Tryout URL
-#url = "https://ushl.sportngin.com/page/show/1209138-team-tryouts"
+url = "https://ushl.sportngin.com/page/show/1209138-team-tryouts"
 
 # Get the HTML Data from that URL
-#r = requests.get(url)
+r = requests.get(url)
 
 # Save File to retrieve later, less web scrapes
-#with open('ushlTryouts.txt', 'w') as file:
-   # file.write(r.text)
+with open('ushlTryouts.txt', 'w') as file:
+    file.write(r.text)
 
 # Opening the html file. If the file
 # is present in different location,
