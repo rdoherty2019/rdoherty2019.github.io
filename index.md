@@ -12,7 +12,7 @@ Created a social media posting application to log into Facebook, Twitter, and Li
 
 Hockey has been a passion of mine my entire life, and now that I'm done playing I'm trying to find a way to fit it back into my professional life. I don't think you can grow up in Michigan in the late 90s, early 2000s and not be a hockey fan, but it probably didn't help that my Canadian grandmother was buying me skates at 2 years old.
 
-[Expect Goals Logistic Model](/Hockey/expectedGoalsModel.html)
+[Expect Goals Logistic Model](/hockey/expectedGoalsModel.html)
 
 _Summary_ :
 
@@ -20,7 +20,7 @@ Using 2015/2016 NHL Play By Play data I created an Expected Goals model which pr
 
 <img src="hockey/Average xG Value By Coordinate.png">
 ---
-[First Shift Experiment](/Hockey/Experiments/firstShiftExperiment.html)
+[First Shift Experiment](/hockey/Experiments/firstShiftExperiment.html)
 
 _Summary_ :
 In trying to investigate the old hockey saying of "Catching your second wind" we discovered that there is no evidence to show that playing a long first shift will have a positive impact on the players goal output for that game. We this based this experiment on 2016 NHL season shift and goals data. In future iterations I would like to expand the experiment to points instead of just goals, and possibly other analytic metrics like corsi. I would also like to test if there is an impact on having a long shift at any point throughout the game and not just the first shift.
