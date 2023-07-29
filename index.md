@@ -2,10 +2,12 @@
 
 ### Marketing Analytics
 
-[Social Media Marketing Bot]
+[Chat Bot Sentiment Analysis](/bobchat-main/Bobchat_Report.html)
 
 _Summary_ :
-Created a social media posting application to log into Facebook, Twitter, and Linkedin for me. This python script will log into Google Sheets, download the content, copy the image url and then post it to the social medias.
+Created a report and model to gauge the effectiveness of a the NYU Chat Bot : "BobChat". I used data visualizations to determine the overall sentiment of the messages and the Chat Bot's effectiveness in answering. I created a sentiment analysis model to predict the sentiment of the message and performed a statistical analysis of the model's performance.  
+
+<img src="bobchat-main/bobchatImage.png">
 ---
 
 ### Hockey Data Science
